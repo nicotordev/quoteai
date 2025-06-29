@@ -20,7 +20,7 @@ import squareBlue from "@/public/assets/img/square-blue.svg";
 import roadmap from "@/public/assets/img/roadmap.svg";
 import startStaking from "@/public/assets/img/start-staking.png";
 import joinDiscord from "@/public/assets/img/join-discord.png";
-
+import videoPlaceholder from "@/public/assets/img/video-placeholder.svg";
 const assets = {
   logo,
   pathDecorationLeft,
@@ -55,6 +55,7 @@ const assets = {
   roadmap,
   startStaking,
   joinDiscord,
+  videoPlaceholder,
 };
 
 export default assets;

@@ -139,6 +139,38 @@ export default function Home() {
           </h3>
         </div>
       </div>
+      {/* Project User Stats Section */}
+      <div className="bg-[#302F31]">
+        <div className="container mx-auto py-16 sm:py-24 lg:py-32 px-4">
+          <div className="pb-12 sm:pb-16 lg:pb-20">
+            <h2 className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight text-white text-center">
+              PROJECT
+              <br />
+              <span className="text-[#5EB77D]">USER STATS</span>
+            </h2>
+          </div>
+
+          <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-16">
+            {[
+              { stat: "100+\nMILLION", label: "All Time\nPrompts" },
+              { stat: "250K+", label: "Daily Prompts" },
+              { stat: "25%+", label: "Growth\nLast 30 Days" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center border border-[#5EB77D] p-4 sm:p-6 lg:p-8 min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] w-full lg:w-1/3"
+              >
+                <p className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white text-center whitespace-pre-line">
+                  {item.stat}
+                </p>
+                <p className="font-zen-dots text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#5EB77D] text-center pt-6 sm:pt-8 lg:pt-12 whitespace-pre-line">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* $QUOTEAI Boost Section */}
       <div className="pt-16 sm:pt-24 lg:pt-32 bg-white">
@@ -171,7 +203,7 @@ export default function Home() {
 
           {/* Table Rows */}
           {[
-            { bg: assets.bg.silverBg, tier: "Silver", stake: "11 k", boost: "1×" },
+            { bg: assets.bg.silverBg, tier: "Silver", stake: "1 k", boost: "1×" },
             { bg: assets.bg.violetBg, tier: "Neon", stake: "10 k", boost: "1.25×" },
             { bg: assets.bg.yellowBg, tier: "Gold", stake: "50 k", boost: "1.5×" },
             { bg: assets.bg.blueBg, tier: "Holo", stake: "200 k", boost: "2×" },
@@ -205,15 +237,7 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto pt-16 sm:pt-24 lg:pt-32 px-4">
-          <video
-            src={assets.video.main}
-            className="w-full h-auto rounded-lg shadow-lg"
-            controls
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
+          <Image src={assets.videoPlaceholder} alt="video placeholder" width={1000} height={1000} className="w-full h-auto aspect-video" />
         </div>
 
         <div className="container mx-auto pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 px-4">
@@ -279,13 +303,13 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="flex flex-col md:flex-row items-baseline justify-between gap-8 md:gap-16">
+          <div className="flex flex-col md:flex-row items-stretch justify-between gap-8 md:gap-16">
             {[
               { image: assets.dataModelsToAdvanceAiLearning.aiAgents, title: "AI Agents." },
               { image: assets.dataModelsToAdvanceAiLearning.generativeAiTools, title: "Generative AI Tools." },
               { image: assets.dataModelsToAdvanceAiLearning.aiPoweredSmmTools, title: "AI Powered SMM Tools." },
             ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center justify-center w-full md:w-1/3">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 sm:p-8 flex flex-col items-center justify-center w-full md:w-1/3 transition-transform duration-200 hover:scale-105">
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
@@ -299,45 +323,10 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          <p className="text-white font-roboto text-lg sm:text-xl md:text-2xl lg:text-3xl text-center pt-12 sm:pt-16 lg:pt-24">
-            We provide narrow data models to help train Ais specific parameters related to social media
-          </p>
         </div>
       </div>
 
-      {/* Project User Stats Section */}
-      <div className="bg-[#302F31]">
-        <div className="container mx-auto py-16 sm:py-24 lg:py-32 px-4">
-          <div className="pb-12 sm:pb-16 lg:pb-20">
-            <h2 className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight text-white text-center">
-              PROJECT
-              <br />
-              <span className="text-[#5EB77D]">USER STATS</span>
-            </h2>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-16">
-            {[
-              { stat: "100+\nMILLION", label: "All Time\nPrompts" },
-              { stat: "250K+", label: "Daily Prompts" },
-              { stat: "25%+", label: "Growth\nLast 30 Days" },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center border border-[#5EB77D] p-4 sm:p-6 lg:p-8 min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] w-full lg:w-1/3"
-              >
-                <p className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white text-center whitespace-pre-line">
-                  {item.stat}
-                </p>
-                <p className="font-zen-dots text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#5EB77D] text-center pt-6 sm:pt-8 lg:pt-12 whitespace-pre-line">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      
 
       {/* Privacy First Section */}
       <div className="py-12 sm:py-16 lg:py-24 bg-white">
