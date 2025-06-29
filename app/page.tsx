@@ -25,6 +25,7 @@ export default function Home() {
   return (
     <div className="bg-[#302F31]">
       {/* Hero Section */}
+
       <div className="pb-16 sm:pb-24 lg:pb-36 border-b border-[#5EB77D]">
         <div className="container mx-auto px-4">
           <div className="w-full flex items-center justify-center pt-12 sm:pt-16 lg:pt-20">
@@ -57,6 +58,7 @@ export default function Home() {
             <div className="pt-12 sm:pt-16 lg:pt-20 xl:pt-28 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
               <button className="bg-transparent border-transparent text-[#000000] font-zen-dots text-base sm:text-lg lg:text-xl xl:text-2xl leading-tight relative pr-8 sm:pr-12 pl-6 sm:pl-8 py-2 transition-all duration-200 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-[#5EB77D] focus:ring-offset-2 focus:ring-offset-[#302F31] active:scale-95 w-full sm:w-auto max-w-xs sm:max-w-none">
                 <span className="relative z-10">LAUNCH APP</span>
+
                 <Image
                   src={assets.launchAppButton || "/placeholder.svg"}
                   alt="launch app"
@@ -68,6 +70,7 @@ export default function Home() {
 
               <button className="bg-transparent border-transparent text-[#5EB77D] font-zen-dots text-base sm:text-lg lg:text-xl xl:text-2xl leading-tight relative pl-12 sm:pl-16 pr-3 sm:pr-4 py-2 transition-all duration-200 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-[#5EB77D] focus:ring-offset-2 focus:ring-offset-[#302F31] active:scale-95 w-full sm:w-auto max-w-xs sm:max-w-none">
                 <span className="relative z-10">HOW IT WORKS</span>
+
                 <Image
                   src={assets.howItWorksButton || "/placeholder.svg"}
                   alt="how it works"
@@ -98,72 +101,82 @@ export default function Home() {
       </div>
 
       {/* 3-Step Flywheel Section */}
-      <div className="pt-8 sm:pt-12 lg:pt-16 container mx-auto px-4">
-        <div className="pb-12 sm:pb-16 lg:pb-24">
-          <h2 className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight text-[#fafafa] text-center">
-            3-Step
-            <br />
-            <span className="text-[#5EB77D]">Flywheel</span>
-          </h2>
-        </div>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16 pb-12 sm:pb-16 lg:pb-20">
-          {steps.map((step) => (
-            <div className="flex flex-col items-center justify-center w-full lg:w-1/3" key={step.id}>
-              <Image
-                src={step.image || "/placeholder.svg"}
-                alt={step.title}
-                width={95}
-                height={95}
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 aspect-square"
-              />
+      <div className="bg-[#E3E3E3] pt-8 sm:pt-12 lg:pt-16">
+        <div className="container mx-auto px-4">
+          <div className="pb-12 sm:pb-16 lg:pb-24">
+            <h2 className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight text-black text-center">
+              3-Step
+              <br />
+              <span className="text-[#5EB77D]">Flywheel</span>
+            </h2>
+          </div>
 
-              <div className="flex flex-col items-center justify-center pt-6 sm:pt-8">
-                <span className="text-[#5EB77D] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-zen-dots text-center">
-                  {step.id}
-                </span>
-                <span className="text-[#fafafa] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-zen-dots text-center">
-                  {step.title}
-                </span>
-                <p className="pt-4 sm:pt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl font-roboto text-[#fafafa] text-center">
-                  {step.description}
-                </p>
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16 pb-12 sm:pb-16 lg:pb-20">
+            {steps.map((step) => (
+              <div className="flex flex-col items-center justify-center w-full lg:w-1/3" key={step.id}>
+                <Image
+                  src={step.image || "/placeholder.svg"}
+                  alt={step.title}
+                  width={95}
+                  height={95}
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 aspect-square"
+                />
+
+                <div className="flex flex-col items-center justify-center pt-6 sm:pt-8">
+                  <span className="text-[#5EB77D] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-zen-dots text-center">
+                    {step.id}
+                  </span>
+
+                  <span className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-zen-dots text-center">
+                    {step.title}
+                  </span>
+
+                  <p className="pt-4 sm:pt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl font-roboto text-black text-center">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="bg-[#5EB77D] w-full lg:w-5/6 mx-auto py-8 sm:py-12 lg:py-16 flex items-center justify-center px-4">
-          <h3 className="font-zen-dots text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#fafafa] text-center">
-            Prompt, Build Data Models, Earn
-          </h3>
+          <div className="bg-[#5EB77D] w-full lg:w-5/6 mx-auto py-8 sm:py-12 lg:py-16 flex items-center justify-center px-4">
+            <h3 className="font-zen-dots text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#fafafa] text-center">
+              Prompt, Build Data Models, Earn
+            </h3>
+          </div>
         </div>
       </div>
+
       {/* Project User Stats Section */}
-      <div className="bg-[#302F31]">
+
+      <div className="bg-[#5EB77D]">
         <div className="container mx-auto py-16 sm:py-24 lg:py-32 px-4">
           <div className="pb-12 sm:pb-16 lg:pb-20">
             <h2 className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight text-white text-center">
               PROJECT
               <br />
-              <span className="text-[#5EB77D]">USER STATS</span>
+              <span className="text-black">USER STATS</span>
             </h2>
           </div>
 
           <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 lg:gap-16">
             {[
               { stat: "100+\nMILLION", label: "All Time\nPrompts" },
+
               { stat: "250K+", label: "Daily Prompts" },
+
               { stat: "25%+", label: "Growth\nLast 30 Days" },
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center border border-[#5EB77D] p-4 sm:p-6 lg:p-8 min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] w-full lg:w-1/3"
+                className="flex flex-col items-center justify-center border border-white p-4 sm:p-6 lg:p-8 min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] w-full lg:w-1/3"
               >
                 <p className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white text-center whitespace-pre-line">
                   {item.stat}
                 </p>
-                <p className="font-zen-dots text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#5EB77D] text-center pt-6 sm:pt-8 lg:pt-12 whitespace-pre-line">
+
+                <p className="font-zen-dots text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black text-center pt-6 sm:pt-8 lg:pt-12 whitespace-pre-line">
                   {item.label}
                 </p>
               </div>
@@ -171,7 +184,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* $QUOTEAI Boost Section */}
       <div className="pt-16 sm:pt-24 lg:pt-32 bg-white">
         <div className="pb-12 sm:pb-16 lg:pb-24 container mx-auto px-4">
@@ -326,7 +338,7 @@ export default function Home() {
         </div>
       </div>
 
-      
+
 
       {/* Privacy First Section */}
       <div className="py-12 sm:py-16 lg:py-24 bg-white">
