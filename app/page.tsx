@@ -407,25 +407,25 @@ export default function Home() {
             </h5>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
-              <button className="bg-transparent border-transparent text-white font-zen-dots text-base sm:text-lg lg:text-xl xl:text-2xl leading-tight relative pr-8 sm:pr-12 pl-2 py-2 w-full sm:w-auto max-w-xs sm:max-w-none">
+              <button className="bg-transparent border-transparent text-white font-zen-dots text-base sm:text-lg lg:text-xl xl:text-2xl leading-tight relative pr-8 sm:pr-12 pl-6 sm:pl-8 py-2 transition-all duration-200 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#5EB77D] active:scale-95 w-full sm:w-auto max-w-xs sm:max-w-none">
                 <span className="relative z-10">START STAKING</span>
                 <Image
                   src={assets.startStaking || "/placeholder.svg"}
                   alt="start staking"
                   width={411}
                   height={74}
-                  className="absolute top-0 left-0 w-full h-full z-0"
+                  className="absolute top-0 left-0 w-full h-full z-0 transition-opacity duration-200 hover:opacity-90"
                 />
               </button>
 
-              <button className="bg-transparent border-transparent text-white font-zen-dots text-base sm:text-lg lg:text-xl xl:text-2xl leading-tight relative pl-12 sm:pl-16 pr-4 py-2 w-full sm:w-auto max-w-xs sm:max-w-none">
+              <button className="bg-transparent border-transparent text-white font-zen-dots text-base sm:text-lg lg:text-xl xl:text-2xl leading-tight relative pl-12 sm:pl-16 pr-3 sm:pr-4 py-2 transition-all duration-200 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#5EB77D] active:scale-95 w-full sm:w-auto max-w-xs sm:max-w-none">
                 <span className="relative z-10">JOIN DISCORD</span>
                 <Image
                   src={assets.joinDiscord || "/placeholder.svg"}
                   alt="join discord"
                   width={411}
                   height={74}
-                  className="absolute top-0 left-0 w-full h-full z-0"
+                  className="absolute top-0 left-0 w-full h-full z-0 transition-opacity duration-200 hover:opacity-90"
                 />
               </button>
             </div>
