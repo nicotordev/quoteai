@@ -102,7 +102,7 @@ export default function Home() {
 
       {/* 3-Step Flywheel Section */}
 
-      <div className="bg-[#E3E3E3] pt-8 sm:pt-12 lg:pt-16">
+      <div className="bg-[#E3E3E3] py-8 sm:py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="pb-12 sm:pb-16 lg:pb-24">
             <h2 className="font-zen-dots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight text-black text-center">
