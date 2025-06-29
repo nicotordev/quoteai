@@ -140,7 +140,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="bg-[#5EB77D] w-full lg:w-5/6 mx-auto py-8 sm:py-12 lg:py-16 flex items-center justify-center px-4">
+          <div className="bg-[#302F31] w-full lg:w-5/6 mx-auto py-8 sm:py-12 lg:py-16 flex items-center justify-center px-4">
             <h3 className="font-zen-dots text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#fafafa] text-center">
               Prompt, Build Data Models, Earn
             </h3>
